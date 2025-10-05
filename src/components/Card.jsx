@@ -7,7 +7,7 @@ const Card = ({icon,title,shortDescription,setOpenModal,handleClick}) => {
 
 
   return (
-    <div className='border-gray-300 border-2 md:w-[300px] w-[300px] md:p-4 p-6 rounded-md flex flex-col gap-4'>
+    <div className='border-gray-300 border-2 md:w-[300px] w-[300px] md:p-4 p-6 rounded-md flex flex-col gap-4 shadow-md shadow-primary'>
     {icon}
      <h2 className='text-primary font-bold'>{title}</h2>
      <span className='text-gray-500 text-wrap'>{shortDescription}</span>
