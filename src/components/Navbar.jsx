@@ -78,9 +78,9 @@ const Navbar = () => {
         <div className=" absolute w-full top-12 p-2 flex flex-col gap-6 items-center justify-center bg-white left-0 w-screen overflow-hidden">
           <ul className="flex flex-col gap-4 mt-6">
             {navItems.map((ele) => (
-              <li className="text-sm font-medium text-gray-500" key={ele}>
-                {ele}
-              </li>
+            <a href={ele.link}>  <li className="text-sm font-medium text-gray-500" key={ele.item}>
+            {ele.item}
+          </li></a>
             ))}
           </ul>
 
