@@ -7,6 +7,7 @@ import { ModalContext } from "../context/ModalContext";
 import { useContext } from "react";
 import InfoModal from "../components/InfoModal";
 import Pricing from "../components/Pricing";
+import About from "../components/About";
 
 const LandingPage = () => {
   const { openModal, setOpenModal } = useContext(ModalContext);
@@ -20,6 +21,7 @@ const LandingPage = () => {
           <Section>
             <Hero />
             <Solutions />
+            <About/>
             <Pricing/>
           </Section>
         </div>

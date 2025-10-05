@@ -12,7 +12,7 @@
   --font-fancy:"Poppins", sans-serif;
 }
 
-::-webkit-scrollbar{
+html{
   scroll-behavior:smooth;
 }
 

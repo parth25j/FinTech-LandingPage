@@ -2,7 +2,22 @@ import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseOutline } from "react-icons/io5";
 
-const navItems = ["Solution", "Resource", "Pricing"];
+// const navItems = ["Solution", "About Us", "Pricing"];
+
+const navItems = [
+  {
+    item: "Solution",
+    link: "#solution",
+  },
+  {
+    item: "About Us",
+    link: "#about",
+  },
+  {
+    item: "Pricing",
+    link: "#pricing",
+  },
+];
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -17,11 +32,22 @@ const Navbar = () => {
       </div>
       <div className="hidden md:block">
         <ul className="flex gap-6 ">
-          {navItems.map((ele) => (
-            <li className="text-sm font-medium text-gray-500 " key={ele}>
-              {ele}
-            </li>
-          ))}
+          {/* {navItems.map((ele) => ( <a href="">
+              <li className="text-sm font-medium text-gray-500 " key={ele}>
+                {ele}
+              </li>
+            </a>
+          ))} */}
+
+          {
+            navItems.map((ele)=>{
+              return <a href={ele.link}>
+              <li className="text-sm font-medium text-gray-500 " key={ele.item}>
+                {ele.item}
+              </li>
+            </a>
+            })
+          }
         </ul>
       </div>
       <div className="md:flex gap-4 hidden">
@@ -51,9 +77,11 @@ const Navbar = () => {
       {toggle ? (
         <div className=" absolute w-full top-12 p-2 flex flex-col gap-6 items-center justify-center bg-white left-0 w-screen overflow-hidden">
           <ul className="flex flex-col gap-4 mt-6">
-               {
-                  navItems.map((ele)=><li className="text-sm font-medium text-gray-500" key={ele}>{ele}</li>)
-               }
+            {navItems.map((ele) => (
+              <li className="text-sm font-medium text-gray-500" key={ele}>
+                {ele}
+              </li>
+            ))}
           </ul>
 
           <div className="flex gap-4 ">
